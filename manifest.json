@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Channel Video Sorter",
+  "version": "1.0.0",
+  "description": "Filter a channel's videos by upload period and sort them by views.",
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["panel.css"],
+      "matches": ["https://www.youtube.com/*"]
+    }
+  ]
+}
